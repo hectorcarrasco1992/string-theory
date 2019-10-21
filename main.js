@@ -4,10 +4,10 @@ function crazyCase(str) {
     if(i % 2 === 1){
       newStr = newStr + str.charAt(i).toUpperCase()
     } else {
-      newStr = newStr + str.charAt(i)
+      newStr = newStr + str.charAt(i).toLowerCase()
     }
   }
-  return newStr.toLowerCase()
+  return newStr
 
 }
     
@@ -42,24 +42,57 @@ function exclaim(str) {
    return str
 }
 function reverse(str) {
-   let reversed = ""
-   for (let i = str.length -1;i > 0;i--){
-    reversed = reversed + str[i]
+  let reversed = ''
+  for (let i = str.length -1;i >= 0; i--){
+    reversed = reversed + str.charAt(i)
   }
+
   return reversed
 
 
  }
 
-function crazyCase2ReturnOfCrazyCase() {
+function crazyCase2ReturnOfCrazyCase(str) {
+  let newStr = ''
+  for (let i = 0; i < str.length; i++) {
+    if(i % 2 === 1){
+      newStr = newStr + str.charAt(i).toUpperCase()
+    } else {
+      newStr = newStr + str.charAt(i).toLowerCase()
+    }
+  }
+  return newStr.trim()
 }
 
-function titleCase() {
+function titleCase(str) {
+  let newStr = ''
+  for (let i = 0; i < str.length; i++) {
+    if(str.includes(' ')){
+      newStr = newStr + str.charAt(i).toUpperCase()
+    } else {
+      newStr = newStr + str.charAt(i).toLowerCase()
+    }
+  }
+  return newStr
 }
 
-function onlyVowels() {
+function onlyVowels(str) {
+let newStr = '' 
+  for(let i = 0; i < str.length; i++){
+    if(str.charAt(i).includes('a')){
+      newStr = newStr + str.charAt(i)
+    }else if(str.charAt(i).includes('e')){
+      newStr = newStr + str.charAt(i)
+    }else if(str.charAt(i).includes('i')){
+      newStr = newStr + str.charAt(i)
+    }else if(str.charAt(i).includes('o')){
+      newStr= newStr + str.charAt(i)
+    }else if(str.charAt(i).includes('u')){
+      newStr = newStr + str.charAt(i)
+    }
+  }
+  return newStr
 }
-
 function crazyCase3SonOfCrazyCase() {
 }
 
