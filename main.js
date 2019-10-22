@@ -57,10 +57,9 @@ function crazyCase2ReturnOfCrazyCase(str) {
   for (let i = 0; i < str.length; i++) {
     if(i % 2 === 1){
       newStr = newStr + str.charAt(i).toUpperCase()
-    } else{
-      newStr = newStr + str.charAt(i).toLowerCase()
-    }  
-  
+    }  else {
+    newStr = newStr + str.charAt(i).toLowerCase()
+    }
   }
   return newStr
   }
@@ -68,15 +67,15 @@ function crazyCase2ReturnOfCrazyCase(str) {
 function titleCase(str) {
   let newStr = ''
   for (let i = 0; i < str.length; i++) {
-    if(str.charAt(i).includes(' ')){
-      newStr = newStr.charAt(i).toUpperCase() + str.charAt(i)
-    } else {
-      newStr = newStr + str.charAt(i)
+    if(str[i-1] === ' '|| i === 0){
+      newStr = newStr + str[i].toUpperCase()
+    }else {
+      newStr = newStr + str[i].toLowerCase()
     }
-  }
-  return newStr
+  
 }
-
+return newStr
+}
 function onlyVowels(str) {
 let newStr = '' 
   for(let i = 0; i < str.length; i++){
