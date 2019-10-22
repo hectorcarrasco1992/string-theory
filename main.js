@@ -77,21 +77,14 @@ function titleCase(str) {
 return newStr
 }
 function onlyVowels(str) {
-let newStr = '' 
+let vowels = '' 
+let vowelsString = 'aeiouAEIOU'
   for(let i = 0; i < str.length; i++){
-    if(str.charAt(i).includes('a')){
-      newStr = newStr + str.charAt(i)
-    }else if(str.charAt(i).includes('e')){
-      newStr = newStr + str.charAt(i)
-    }else if(str.charAt(i).includes('i')){
-      newStr = newStr + str.charAt(i)
-    }else if(str.charAt(i).includes('o')){
-      newStr= newStr + str.charAt(i)
-    }else if(str.charAt(i).includes('u')){
-      newStr = newStr + str.charAt(i)
+    if ( vowelsString.includes(str[i])){
+      vowels = vowels + str[i]
     }
   }
-  return newStr
+  return vowels
 }
 function crazyCase3SonOfCrazyCase(str) {
   let newStr = ''
