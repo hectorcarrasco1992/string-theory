@@ -57,16 +57,17 @@ function crazyCase2ReturnOfCrazyCase(str) {
   for (let i = 0; i < str.length; i++) {
     if(i % 2 === 1){
       newStr = newStr + str.charAt(i).toUpperCase()
-    } else {
+    } else{
       newStr = newStr + str.charAt(i).toLowerCase()
-    }
+    }  
+  
   }
-  return newStr.trim()
-}
+  return newStr
+  }
 
 function titleCase(str) {
   let newStr = ''
-  for (let i = ' '; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if(str.charAt(i).includes(' ')){
       newStr = newStr.charAt(i).toUpperCase() + str.charAt(i)
     } else {
